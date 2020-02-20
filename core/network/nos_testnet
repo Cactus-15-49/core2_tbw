@@ -1,0 +1,8 @@
+# network
+EPOCH = "2020,2,5,00,00,00" 2020-02-05T19:00:00.000Z
+VERSION = 90
+WIF = 170
+API_PORT = 4003
+DATABASE = "nos_testnet"
+DATABASE_USER = "null"
+DATABASE_PASSWORD = "password"

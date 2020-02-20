@@ -208,7 +208,7 @@ def get_voters():
     while start <= counter:
         c = client.delegates.voters(delegate_id=data.delegate, page=start)
         for j in c['data']:
-            initial_voters.append((j['address'], int(j['balance'])))
+            initial_voters.append((j['address'], int(j['power'])))
         start += 1
     
    
@@ -288,6 +288,7 @@ def process_delegate_pmt(fee, adjust):
                 snekdb.storePayRun(row[0], row[1], del_address(row[0]))
                 # adjust sql balances
                 snekdb.updateDelegatePaidBalance(row[0], row[1])
+
 
 def payout():
     minamt = int(data.min_payment * data.atomic)
